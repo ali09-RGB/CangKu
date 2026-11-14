@@ -1,0 +1,64 @@
+{
+  "_说明": "新行业起点模板。复制到 $WS/工具/domain.json 后逐段填。填完跑 python domain.py --check 与 python classify.py --selftest。",
+  "_填写顺序": "1. domain.what 先写清「这个领域是什么」→ 2. 写 core（20~30 个够）→ 3. 补 support / negative / off_domain → 4. 定 topics → 5. 写 keywords → 6. terms 边跑边补 → 7. vault 指向新库",
+  "_注意": "boundary 段必须显式处理：要么写成本行业的词，要么写 {} 表示没有这类规则。留空不管会静默沿用上一个行业的排除词，造成大面积误判。",
+
+  "domain": {
+    "id": "your-domain-id",
+    "name": "领域中文名",
+    "aliases": [],
+    "what": "一句话说清这个领域在讲什么。这句话是后面所有词表的判断依据，写模糊了词表一定飘。"
+  },
+
+  "platform": {
+    "id": "douyin",
+    "name": "抖音",
+    "note": "平台适配在代码里，不在本配置。这里只是标记。"
+  },
+
+  "judge": {
+    "core": [
+      "领域定义性术语：命中任意一个即判定属于本领域"
+    ],
+    "support": [
+      "宽泛词：需要命中两个以上才算，用来接住没有术语但确实在讲这个领域的内容"
+    ],
+    "negative": [
+      "领域相反的词：形式相似但业务不同，一票否决"
+    ],
+    "off_domain": [
+      "领域外的正当内容：售后、平台处罚、鸡汤等，一票否决"
+    ],
+    "hype": [
+      "标题党词：只降排序分，绝不否决"
+    ],
+    "author_hints": [
+      "作者名里常见的领域特征词，加分项"
+    ],
+    "boundary": {}
+  },
+
+  "topics": [
+    {
+      "name": "主题名按决策环节分，不要按内容形式分",
+      "priority": 1,
+      "keywords": ["该主题的特征词"]
+    }
+  ],
+
+  "keywords": [
+    "搜索关键词：照缺口设计，并检验「搜出来的主语是不是目标场域」"
+  ],
+
+  "terms": {
+    "replace": {},
+    "flag_only": {}
+  },
+
+  "vault": {
+    "path": "C:/path/to/your/vault",
+    "report_dir": "10-视频报告",
+    "home": "00-首页·知识地图.md",
+    "index_dir": "20-方法论索引"
+  }
+}
