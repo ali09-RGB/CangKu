@@ -9,7 +9,7 @@
 想一次性投喂一整个主题，用下面任一合订本（按需取一份，不要全给）：
 
 - `llms-live-commerce.txt` —— 直播带货，77 篇 / 约 30.7 万字
-- `llms-method.txt` —— 流水线方法，6 篇 / 约 8.9 万字
+- `llms-method.txt` —— 流水线方法，6 篇 / 约 9.1 万字
 - `llms-skill.txt` —— 技能，6 篇 / 约 1.7 万字
 - `llms-thinking-raw.txt` —— 思维笔记 · 原文，25 篇 / 约 11.5 万字
 - `llms-thinking-wiki.txt` —— 思维笔记 · 整理，63 篇 / 约 5.4 万字
